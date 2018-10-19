@@ -2,10 +2,7 @@
 
 struct{
     header: jump menu
-    Home: {
-        news
-        5 blogs
-    }
+    Home img
     blog:
     info: {
         名前
