@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
   <meta property='og:type' content='website'>
-  <meta property='og:title' content='WebデザイナーTARO YAMADA ポートフォリオ'>
+  <meta property='og:title' content='EbichanOO ポートフォリオ'>
   <meta property='og:url' content='URLが入る'>
-  <meta property='og:description' content='TARO YAMADAのポートフォリオサイトです。'>
+  <meta property='og:description' content='EbichanOOのポートフォリオサイトです。'>
   <meta property="og:image" content="img/ogp.png">
-  <meta name="description" content="TARO YAMADAのポートフォリオサイトです" />
-  <title>TARO YAMADA ポートフォリオ</title>
+  <meta name="description" content="EbichanOOのポートフォリオサイトです" />
+  <title>EbichanOO ポートフォリオ</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
@@ -45,36 +45,53 @@
 
       <article class="article">
         <div class="article-container">
-          <h2 class="article-title">Sprout</h2>
+          <h2 class="article-title">Toolkit</h2>
           <div class="article-body">
             <p>
-              <img src="img/Sprout.png" style="display: block; margin: auto;" alt="">
+              <img src="img/toolkit-main.JPG" style="display: block; margin: auto;" alt="">
             </p>
             <p>
-              2019年の学内ハッカソンにて新しい環境での友達作りをテーマに作成したプロダクトです。
+              自分で使うツール群をまとめたプロダクトです。
             </p>
             <h3>URL</h3>
-            <p><a href="https://github.com/p2hacks/team1902" target="_blank" rel="noopener">Github</a></p>
-            <h3>担当</h3>
-            <p>サーバーサイド・フロントエンド(js通信系)</p>
-            <h3>プロダクトの目的</h3>
-            <p>趣味の共有を行い会話のきっかけを作る</p>
-            <h3>ターゲット</h3>
-            <p>上手く会話を始めることができず、友達が作れない人</p>
-            <h3>機能</h3>
+            <p><a href="https://github.com/EbichanOO/myToolkit" target="_blank" rel="noopener">Github</a></p>
+            <h3>画像pdf変換(imgToPdf)</h3>
+            <p>
+              <img src="img/toolkit-imgtopdf.JPG" style="display: block; margin: auto;" alt="">
+            </p>
+            <p>複数の画像を1つのpdfに変換するもの</p>
+            <h3>pdf結合(concatPdf)</h3>
+            <p>
+              <img src="img/toolkit-concatpdf.JPG" style="display: block; margin: auto;" alt="">
+            </p>
+            <p>複数のpdfを1つのpdfに変換するもの</p>
+            <h3>経過時間計算(calc_time_deff)</h3>
+            <p>GCPで利用するために日をまたいだ時間を計算する</p>
+            <h3>ディレクトリ内検索(filename_parser)</h3>
+            <p>指定されたディレクトリ内のファイル名をカンマ区切りで出力する</p>
+            <h3>採点補助(schoolScoring)</h3>
+            <p>
+              <img src="img/toolkit-scoring.JPG" style="display: block; margin: auto;" alt="">
+            </p>
+            <p>問題・回答を1個ずつ提示して採点を(〇, ×, △)で入力しcsv出力する</p>
+            <h3>pdf文章コピペ補助(text_change)</h3>
+            <p>pdfをコピペすると改行や変な空白が入るのでそれを解決する</p>
+            <h3>DeepLにpdfコピペするためのアプリ</h3>
+            <p>
+              <img src="img/toolkit-deepl.JPG" style="display: block; margin: auto;" alt="">
+            </p>
+            <p>toolkitに結合予定のプロダクト　現在Github非公開(DeepLトークン直打ちなため)</p>
             <ul>
-              <li>近くの人と趣味などが書かれた名刺の交換を自動で行うことができる</li>
-              <li>場所ごとに名刺の投稿を行うことができる</li>
+              <li>コピペした文章を成形する</li>
+              <li>コピペした文章を成形して保存されているコピペと繋げる</li>
             </ul>
             <h3>コーディングについて</h3>
             <p>
-              以下のものを用いてAPIサーバを構築しました。
+              以下のものを用いてプロダクトを作成しました。
             </p>
             <ul>
-              <li>Heroku</li>
               <li>Python</li>
-              <li>Flask</li>
-              <li>sqlite</li>
+              <li>Tkinter</li>
             </ul>
           </div>
           <div class="home-link">
