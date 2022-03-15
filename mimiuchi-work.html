@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta property='og:type' content='website'>
+  <meta property='og:title' content='EbichanOO ポートフォリオ'>
+  <meta property='og:url' content='URLが入る'>
+  <meta property='og:description' content='EbichanOOのポートフォリオサイトです。'>
+  <meta property="og:image" content="img/ogp.png">
+  <meta name="description" content="EbichanOOのポートフォリオサイトです" />
+  <title>EbichanOO ポートフォリオ</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="img/favicon.ico" />
+  <link rel=”canonical” href=”URLが入る” />
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- header -->
+    <header class="header ">
+      <div class="container">
+        <h1 class="header-logo">
+          <a href="./index.html">EbichanOO</a>
+        </h1>
+        <nav class="gnav">
+          <ul class="gnav-list">
+            <li class="gnav-item"><a href="./index.html#works">WORKS</a></li>
+            <li class="gnav-item"><a href="./index.html#history">HISTORY</a></li>
+            <li class="gnav-item"><a href="./index.html#skill">SKILL</a></li>
+            <li class="gnav-item"><a href="./index.html#about">ABOUT</a></li>
+            <li class="gnav-item"><a href="./index.html#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- /header -->
+
+    <main class="content">
+
+      <article class="article">
+        <div class="article-container">
+          <h2 class="article-title">プロジェクト開発 Mimiuchi</h2>
+          <div class="article-body">
+            <p>
+              <img src="img/mimiuchi-top.jpg" style="display: block; margin: auto;" width="50%" height="100%" alt="">
+            </p>
+            <p>
+              2019年に授業のプロジェクト学習で製作したプロダクトです。
+            </p>
+            <h3>担当</h3>
+            <p>サーバーサイド設計・開発，インフラ構築</p>
+            <h3>プロダクトの目的</h3>
+            <p>地域密着型の飲食店で店員が把握できていない常連客を確保する</p>
+            <h3>ターゲット</h3>
+            <p>店員とコミュニケーションを取らない常連客</p>
+            <h3>背景と目的</h3>
+            <p>函館の飲食店には，個人店が多いという特徴がある．例えば，大門横丁では，居酒屋やラーメン店などの函館に根ざした個人店が連なっている．このような個人店ではメニュー表には載っていない裏メニューや試作品といったメニューが提供されていることがある．ここでは，そういった公には知られていないメニューのことを限定メニューと呼ぶ．限定メニューは，常連客に提供されることが多い．例えば，ラッキーピエロには，常連優遇サービスがある．このサービスは，利用金額に応じて4段階でそれぞれ特典がつくポイント会員制度を導入している．最高ランクに昇格すると，ご利用金額６％以上の還元に加えて，来店すると大歓待を受けるなどの特別なサービスもある．優遇された客は自然と店に愛着を持ち，また，そうなることで幅広い層の支持を得ている．このように，店側にとって常連客の存在はとても重要なものであり，常連を優遇することは店を盛り上げることにも繋がっている．しかし，限定メニューによって店を盛り上げるための課題として，限定メニューの認知度が高まると，価値が下がってしまうことがある．また，店側が把握していない常連客がいる可能性がある．店員とのコミュニケーションをあまり好まない客や，そもそも客とのコミュニケーションが少ない店などでは，客側からすると，自分がその店の常連になれているのか分からない．しかし，常連客は一見の客よりもお金を支払っているので，手厚い顧客サービスを提供されるのは当たり前という考えを持つ人は少なくない．さらに，一見の客との差別化があからさまだと不快感を覚える人も存在する．</p>
+            <p>本グループの目的は，客とお店を繋ぐ「えこひいき」コミュニケーションを実現し，背景にあげた飲食店の抱えている課題を解決することである．これにより，誰でも常連客になることができ，常連サービスを受けることができる．また，店側は把握しきれてない常連客を把握することができる．さらに，限定メニューの価値を下げることなく，限定メニューを食べることができる．</p>
+            <h3>客側機能</h3>
+            <ul>
+              <li>ビーコンを用いたシステム的な常連客の認定</li>
+              <li>常連客に対する限定メニュー・クーポンの提供</li>
+              <li>次の限定メニュー・クーポンまでの来店回数提示</li>
+              <li>メニュー等のブックマーク</li>
+            </ul>
+            <h3>店側機能</h3>
+            <ul>
+              <li>ビーコンとの連携や店舗情報の登録・編集</li>
+              <li>メニュー・クーポンの登録・編集</li>
+              <li>注文されたメニューの統計(注文回数/全体の注文回数)</li>
+            </ul>
+            <h3>導入した開発手法</h3>
+            <p>アジャイル開発　スクラム(スプリント期間 1週間)</p>
+            <h3>システム仕様</h3>
+            <img src="img/mimiuchi-system.png" style="display: block; margin: auto;" width="50%" height="50%" alt="">
+            <ul>
+              <li>インフラはk8sを利用して負荷分散・拡張性・継続性・サーバーの画一性があるインフラを構築した</li>
+              <li>MVCアーキテクチャを基礎としてGo(Gin)でAPIサーバーを構築した</li>
+              <li>20個のAPIを用意した</li>
+              <li>自動CI/CDの構築や厳密なエラーハンドリングの実装は行うことが出来なかった</li>
+            </ul>
+            <p>また以下の設計でdbを構築した(担当者別)</p>
+            <img src="img/mimiuchi-db.jpg" style="display: block; margin: auto;" width="50%" height="50%" alt="">
+            <h3>発表</h3>
+            <ul>
+              <li>中間・成果発表会</li>
+              <li>オープンキャンパス</li>
+              <li>HAKODATEアカデミックリンク</li>
+              <li>enPiT BizSysD 北海道・東北グループ合同発表会</li>
+            </ul>
+            <h3>著作権</h3>
+            <p>公立はこだて未来大学</p>
+          </div>
+          <div class="home-link">
+            <a href="./index.html#works">Works一覧へ</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="page-top" id="js-page-top">
+        <span class="material-icons-outlined">expand_less</span>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="copyright">&copy;EbichanOO</div>
+    </footer>
+    <!-- /footer -->
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type='text/javascript' src="js/script.js"></script>
+</body>
+</html>

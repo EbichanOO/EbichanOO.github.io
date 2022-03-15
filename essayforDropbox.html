@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta property='og:type' content='website'>
+  <meta property='og:title' content='EbichanOO ポートフォリオ'>
+  <meta property='og:url' content='URLが入る'>
+  <meta property='og:description' content='EbichanOOのポートフォリオサイトです。'>
+  <meta property="og:image" content="img/ogp.png">
+  <meta name="description" content="EbichanOOのポートフォリオサイトです" />
+  <title>EbichanOO ポートフォリオ</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="img/favicon.ico" />
+  <link rel=”canonical” href=”URLが入る” />
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- header -->
+    <header class="header ">
+      <div class="container">
+        <h1 class="header-logo">
+          <a href="./index.html">EbichanOO</a>
+        </h1>
+        <nav class="gnav">
+          <ul class="gnav-list">
+            <li class="gnav-item"><a href="./index.html#works">WORKS</a></li>
+            <li class="gnav-item"><a href="./index.html#history">HISTORY</a></li>
+            <li class="gnav-item"><a href="./index.html#skill">SKILL</a></li>
+            <li class="gnav-item"><a href="./index.html#about">ABOUT</a></li>
+            <li class="gnav-item"><a href="./index.html#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- /header -->
+
+    <main class="content">
+
+      <article class="article">
+        <div class="article-container">
+          <h2 class="article-title">essayForDropbox</h2>
+          <div class="article-body">
+            <p>
+              <img src="img/essayfor-top.jpg" alt="">
+            </p>
+            <p>
+              url指定した論文をpdfとしてDropboxに保存するプロダクトです。
+            </p>
+            <h3>URL</h3>
+            <p><a href="https://github.com/EbichanOO/EssayForDropbox" target="_blank" rel="noopener">Github</a></p>
+            <p><a href="https://qiita.com/Ebi10/items/d3e366f83593b41ad709" target="_blank" rel="noopener">Qiita</a></p>
+            <h3>担当</h3>
+            <p>自作プロダクト</p>
+            <h3>サイトの目的</h3>
+            <p>大きい論文をモバイル回線でダウンロードしたくない問題や、<br>ブラウザに保存してある論文urlが積みあがっていく問題を解決する</p>
+            <h3>機能</h3>
+            <ul>
+              <li>pdfのurlを受け取りダウンロードする</li>
+              <li>ダウンロードされたpdfをDropboxにアップロードする</li>
+            </ul>
+            <h3>コーディングについて</h3>
+            <p>
+              以下のものを用いてAPIサーバを構築しました。
+            </p>
+            <ul>
+              <li>Heroku</li>
+              <li>Go</li>
+              <li>Gin</li>
+              <li>Dropbox</li>
+              <li>iosショートカット</li>
+            </ul>
+          </div>
+          <div class="home-link">
+            <a href="./index.html#works">Works一覧へ</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="page-top" id="js-page-top">
+        <span class="material-icons-outlined">expand_less</span>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="copyright">&copy;EbichanOO</div>
+    </footer>
+    <!-- /footer -->
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type='text/javascript' src="js/script.js"></script>
+</body>
+</html>

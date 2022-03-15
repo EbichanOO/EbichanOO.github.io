@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta property='og:type' content='website'>
+  <meta property='og:title' content='EbichanOO ポートフォリオ'>
+  <meta property='og:url' content='URLが入る'>
+  <meta property='og:description' content='EbichanOOのポートフォリオサイトです。'>
+  <meta property="og:image" content="img/ogp.png">
+  <meta name="description" content="EbichanOOのポートフォリオサイトです" />
+  <title>EbichanOO ポートフォリオ</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="img/favicon.ico" />
+  <link rel=”canonical” href=”URLが入る” />
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- header -->
+    <header class="header ">
+      <div class="container">
+        <h1 class="header-logo">
+          <a href="./index.html">EbichanOO</a>
+        </h1>
+        <nav class="gnav">
+          <ul class="gnav-list">
+            <li class="gnav-item"><a href="./index.html#works">WORKS</a></li>
+            <li class="gnav-item"><a href="./index.html#history">HISTORY</a></li>
+            <li class="gnav-item"><a href="./index.html#skill">SKILL</a></li>
+            <li class="gnav-item"><a href="./index.html#about">ABOUT</a></li>
+            <li class="gnav-item"><a href="./index.html#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- /header -->
+
+    <main class="content">
+
+      <article class="article">
+        <div class="article-container">
+          <h2 class="article-title">[卒業研究]エピソード記憶モジュールを用いた省メモリアーキテクチャの構築</h2>
+          <div class="article-body">
+            <p>
+              <img src="img/b-img.jpg" style="display: block; margin: auto;" alt="">
+            </p>
+            <h3>研究の目的</h3>
+            <p>中期記憶を用いて省コストな学習を行う</p>
+            <h3>概要</h3>
+            <p>
+              深層学習は多くのソフトウェアプロダクトで用いられているが，一般にこれらの学習時には膨大なマシンのリソースを要する．それにより非力なリソースしかもたないエッジデバイス上ではモデルの学習ができない．エッジデバイス上で深層モデルを利用する際，プライベートな情報の漏洩や回線状態が悪い状況があることなどが課題としてあるためエッジデバイス上で学習を行うことは特に役立つと見込まれ画像モデルでの省メモリアーキテクチャが提案されたが，これは一般化されたものでなく自然言語処理モデルには利用できなかった．よって本研究では自然言語処理モデルでも利用できる省メモリアーキテクチャをエピソード記憶モジュールを用いて構築する．エピソード記憶モジュールを用いた省メモリアーキテクチャは大規模モデルの一部パラメータを学習させる事で省メモリ化を行うため，事前実験として24個のモデルと6個の層単位学習に対して，メモリ利用量とf1スコアの計測を行った．その結果メモリ利用量とf1スコアには有意な正の相関があり，アクティベーション量によってメモリ量が増加することが確認され，それによってエピソード記憶モジュールを利用し偶数層単位で学習することはメモリ利用量において有効であることがわかった．
+            </p>
+            <h3>コーディングについて</h3>
+            <p>
+              以下のものを用いて実験を行いました。
+            </p>
+            <ul>
+              <li>Python</li>
+              <li>Tensorflow</li>
+              <li>GCP(GCE, TPU, Storage)</li>
+            </ul>
+          </div>
+          <div class="home-link">
+            <a href="./index.html#works">Works一覧へ</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="page-top" id="js-page-top">
+        <span class="material-icons-outlined">expand_less</span>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="copyright">&copy;EbichanOO</div>
+    </footer>
+    <!-- /footer -->
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type='text/javascript' src="js/script.js"></script>
+</body>
+</html>
