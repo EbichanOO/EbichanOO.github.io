@@ -7,15 +7,15 @@
   <meta property='og:title' content='EbichanOO ポートフォリオ'>
   <meta property='og:url' content='URLが入る'>
   <meta property='og:description' content='EbichanOOのポートフォリオサイトです。'>
-  <meta property="og:image" content="img/ogp.png">
+  <meta property="og:image" content="../img/ogp.png">
   <meta name="description" content="EbichanOOのポートフォリオサイトです" />
   <title>EbichanOO ポートフォリオ</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
-  <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
-  <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" href="img/favicon.ico" />
+  <link href="../css/ress.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="../css/style.css" media="all" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="../img/favicon.ico" />
   <link rel=”canonical” href=”URLが入る” />
 </head>
 
@@ -26,15 +26,15 @@
     <header class="header ">
       <div class="container">
         <h1 class="header-logo">
-          <a href="./index.html">EbichanOO</a>
+          <a href="../../index.html">EbichanOO</a>
         </h1>
         <nav class="gnav">
           <ul class="gnav-list">
-            <li class="gnav-item"><a href="./index.html#works">WORKS</a></li>
-            <li class="gnav-item"><a href="./index.html#history">HISTORY</a></li>
-            <li class="gnav-item"><a href="./index.html#skill">SKILL</a></li>
-            <li class="gnav-item"><a href="./index.html#about">ABOUT</a></li>
-            <li class="gnav-item"><a href="./index.html#contact">CONTACT</a></li>
+            <li class="gnav-item"><a href="../../index.html#works">WORKS</a></li>
+            <li class="gnav-item"><a href="../../index.html#history">HISTORY</a></li>
+            <li class="gnav-item"><a href="../../index.html#skill">SKILL</a></li>
+            <li class="gnav-item"><a href="../../index.html#about">ABOUT</a></li>
+            <li class="gnav-item"><a href="../../index.html#contact">CONTACT</a></li>
           </ul>
         </nav>
       </div>
@@ -45,36 +45,39 @@
 
       <article class="article">
         <div class="article-container">
-          <h2 class="article-title">Tensorflowの勾配取得方法の検証</h2>
+          <h2 class="article-title">年齢推定モデル</h2>
           <div class="article-body">
             <p>
-              <img src="img/tf-gradtop.JPG" style="display: block; margin: auto;" alt="">
+              <video src="../video/guessAgeOfFace.mp4" style="display: block; margin: auto;" width="100%" height="100%" alt="" controls>
             </p>
             <p>
-              2021年のアドベントカレンダーに投稿するためにTensorflowバージョン1系の勾配取得方法について掲載しました。
+              2017年に授業で発表した年齢推定モデルです。
             </p>
             <h3>URL</h3>
-            <p><a href="https://ab10.hatenablog.com/entry/2021/12/23/204125" target="_blank" rel="noopener">はてなブログ</a></p>
-            <p>綺麗にしていないのでまだGithub非公開</p>
+            <p><a href="https://github.com/EbichanOO/Guess_age_of_face" target="_blank" rel="noopener">Github</a></p>
+            <h3>担当</h3>
+            <p>自作プロダクト</p>
             <h3>プロダクトの目的</h3>
-            <p>Tensorflow1の勾配取得方法について資料が少ないため</p>
-            <h3>内容</h3>
+            <p>現実と仮想の分け目を無くす</p>
+            <h3>機能</h3>
             <ul>
-              <li>単純NNを構築し以下について検証しそれをまとめた</li>
-              <li>Tensorflow2の重み・勾配取得方法をまとめた</li>
-              <li>Tensorflow1の重み・勾配取得方法をまとめた</li>
+              <li>顔画像を撮影し、それをCNNモデルで処理して推定値(ボール)を出力する</li>
+              <li>顔画像から何歳か推定する</li>
+              <li>ボールを入力・出力と見立ててPCに出し入れする</li>
+              <li>ボールを顔画像と見立てて処理してる様子を画面に表示する</li>
             </ul>
             <h3>コーディングについて</h3>
             <p>
-              以下のものを用いて検証を行いました。
+              以下のものを用いてプロダクトを作成しました。
             </p>
             <ul>
               <li>Python</li>
-              <li>Tensorflow 1.15.3, 2.0.0</li>
+              <li>Numpy</li>
+              <li>Processing</li>
             </ul>
           </div>
           <div class="home-link">
-            <a href="./index.html#works">Works一覧へ</a>
+            <a href="../../index.html#works">Works一覧へ</a>
           </div>
         </div>
       </article>
@@ -92,6 +95,6 @@
 
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type='text/javascript' src="js/script.js"></script>
+  <script type='text/javascript' src="../js/script.js"></script>
 </body>
 </html>

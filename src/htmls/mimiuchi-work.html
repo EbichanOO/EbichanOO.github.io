@@ -7,15 +7,15 @@
   <meta property='og:title' content='EbichanOO ポートフォリオ'>
   <meta property='og:url' content='URLが入る'>
   <meta property='og:description' content='EbichanOOのポートフォリオサイトです。'>
-  <meta property="og:image" content="img/ogp.png">
+  <meta property="og:image" content="../img/ogp.png">
   <meta name="description" content="EbichanOOのポートフォリオサイトです" />
   <title>EbichanOO ポートフォリオ</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
-  <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
-  <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
-  <link rel="shortcut icon" href="img/favicon.ico" />
+  <link href="../css/ress.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="../css/style.css" media="all" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="../img/favicon.ico" />
   <link rel=”canonical” href=”URLが入る” />
 </head>
 
@@ -26,15 +26,15 @@
     <header class="header ">
       <div class="container">
         <h1 class="header-logo">
-          <a href="./index.html">EbichanOO</a>
+          <a href="../../index.html">EbichanOO</a>
         </h1>
         <nav class="gnav">
           <ul class="gnav-list">
-            <li class="gnav-item"><a href="./index.html#works">WORKS</a></li>
-            <li class="gnav-item"><a href="./index.html#history">HISTORY</a></li>
-            <li class="gnav-item"><a href="./index.html#skill">SKILL</a></li>
-            <li class="gnav-item"><a href="./index.html#about">ABOUT</a></li>
-            <li class="gnav-item"><a href="./index.html#contact">CONTACT</a></li>
+            <li class="gnav-item"><a href="../../index.html#works">WORKS</a></li>
+            <li class="gnav-item"><a href="../../index.html#history">HISTORY</a></li>
+            <li class="gnav-item"><a href="../../index.html#skill">SKILL</a></li>
+            <li class="gnav-item"><a href="../../index.html#about">ABOUT</a></li>
+            <li class="gnav-item"><a href="../../index.html#contact">CONTACT</a></li>
           </ul>
         </nav>
       </div>
@@ -48,7 +48,7 @@
           <h2 class="article-title">プロジェクト開発 Mimiuchi</h2>
           <div class="article-body">
             <p>
-              <img src="img/mimiuchi-top.jpg" style="display: block; margin: auto;" width="50%" height="100%" alt="">
+              <img src="../img/mimiuchi-top.jpg" style="display: block; margin: auto;" width="50%" height="100%" alt="">
             </p>
             <p>
               2019年に授業のプロジェクト学習で製作したプロダクトです。
@@ -75,6 +75,8 @@
               <li>メニュー・クーポンの登録・編集</li>
               <li>注文されたメニューの統計(注文回数/全体の注文回数)</li>
             </ul>
+            <h3>導入した開発手法</h3>
+            <p>アジャイル（スクラム開発）</p>
             <h3>開発手順</h3>
             <ol>
               <li>フィールドワークによる事前調査</li>
@@ -86,10 +88,8 @@
               <li>プロダクトバックログの作成やスプリントプランニングを行い開発を始める</li>
               <li>スプリントを1週間として実装とレビューを行った</li>
             </ol>
-            <h3>導入した開発手法</h3>
-            <p>アジャイル（スクラム開発）</p>
             <h3>システム仕様</h3>
-            <img src="img/mimiuchi-system.png" style="display: block; margin: auto;" width="50%" height="50%" alt="">
+            <img src="../img/mimiuchi-system.png" style="display: block; margin: auto;" width="50%" height="50%" alt="">
             <ul>
               <li>インフラはk8sを利用して負荷分散・拡張性・継続性・サーバーの画一性があるインフラを構築した</li>
               <li>MVCアーキテクチャを基礎としてGo(Gin)でAPIサーバーを構築した</li>
@@ -97,7 +97,7 @@
               <li>自動CI/CDの構築や厳密なエラーハンドリングの実装は行うことが出来なかった</li>
             </ul>
             <p>また以下の設計でdbを構築した(担当者別)</p>
-            <img src="img/mimiuchi-db.jpg" style="display: block; margin: auto;" width="50%" height="50%" alt="">
+            <img src="../img/mimiuchi-db.jpg" style="display: block; margin: auto;" width="50%" height="50%" alt="">
             <h3>発表</h3>
             <ul>
               <li>中間・成果発表会</li>
@@ -109,7 +109,7 @@
             <p>公立はこだて未来大学</p>
           </div>
           <div class="home-link">
-            <a href="./index.html#works">Works一覧へ</a>
+            <a href="../../index.html#works">Works一覧へ</a>
           </div>
         </div>
       </article>
@@ -127,6 +127,6 @@
 
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type='text/javascript' src="js/script.js"></script>
+  <script type='text/javascript' src="../js/script.js"></script>
 </body>
 </html>
