@@ -377,6 +377,59 @@ img {
   text-align: center;
 }
 
+/*--------------------------------
+ 番号リスト1.1の拡張(今後クラス等でまとめる)
+---------------------------------*/
+ol.first-layer{
+  counter-reset: num_f;
+}
+.first-layer li{
+  list-style-type: none;
+  list-style-position: inside;
+  counter-increment: num_f;
+}
+.first-layer li:before{
+  list-style-type: none;
+  list-style-position: inside;
+  display: marker;
+  content: counter(num_f)". ";
+}
+ol.second-layer{
+  counter-reset: num_s;
+}
+.second-layer li{
+  list-style-type: none;
+  list-style-position: inside;
+  counter-increment: num_s;
+  padding-left :20px;
+}
+.second-layer li:before{
+  list-style-type: none;
+  list-style-position: inside;
+  display: marker;
+  content: counter(num_f)'.' counter(num_s)". ";
+}
+ol.third-layer{
+  counter-reset: num_t;
+}
+.third-layer li{
+  list-style-type: none;
+  list-style-position: inside;
+  counter-increment: num_t;
+  padding-left :40px;
+}
+.third-layer li:before{
+  list-style-type: none;
+  list-style-position: inside;
+  display: marker;
+  content: counter(num_f)'.' counter(num_s)"." counter(num_t)'. ';
+}
+
+.second-layerL li{
+  list-style-position: inside;
+  padding-left :20px;
+}
+
 /*media Queries 767
 ----------------------------------------------------*/
 @media screen and (max-width: 767px) {

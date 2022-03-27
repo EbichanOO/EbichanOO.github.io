@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta property='og:type' content='website'>
+  <meta property='og:title' content='EbichanOO ポートフォリオ'>
+  <meta property='og:url' content='URLが入る'>
+  <meta property='og:description' content='EbichanOOのポートフォリオサイトです。'>
+  <meta property="og:image" content="../img/ogp.png">
+  <meta name="description" content="EbichanOOのポートフォリオサイトです" />
+  <title>EbichanOO ポートフォリオ</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="../css/ress.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="../css/style.css" media="all" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="../img/favicon.ico" />
+  <link rel=”canonical” href=”URLが入る” />
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- header -->
+    <header class="header ">
+      <div class="container">
+        <h1 class="header-logo">
+          <a href="../../index.html">EbichanOO</a>
+        </h1>
+        <nav class="gnav">
+          <ul class="gnav-list">
+            <li class="gnav-item"><a href="../../index.html#works">WORKS</a></li>
+            <li class="gnav-item"><a href="../../index.html#history">HISTORY</a></li>
+            <li class="gnav-item"><a href="../../index.html#skill">SKILL</a></li>
+            <li class="gnav-item"><a href="../../index.html#about">ABOUT</a></li>
+            <li class="gnav-item"><a href="../../index.html#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- /header -->
+
+    <main class="content">
+
+      <article class="article">
+        <div class="article-container">
+          <h2 class="article-title">デジタル採点システムの設計開発</h2>
+          <div class="article-body">
+            <p>
+              <img src="../img/digital-scoring-top.jpg" style="display: block; margin: auto;" alt="">
+            </p>
+            <p>TAが採点業務を行い、担当教員が確認業務を行う「大学での採点業務」を効率化するシステムです</p>
+            <h3>URL</h3>
+            <p><a href="https://github.com/EbichanOO/TA_work_efficiency" target="_blank" rel="noopener">Github</a></p>
+            <p>
+              <h3>目次</h3>
+              <ol class="first-layer">
+                <li><a href="#motivation">本プロダクトのモチベーション</a></li>
+                <li><a href="#fundamental-design">基本設計</a></li>
+                <ol class="second-layer">
+                  <li><a href="#persona">ペルソナの設定</a></li>
+                  <li><a href="#user-story">ユーザストーリーマップ</a></li>
+                  <li><a href="#system-design">システム図</a></li>
+                  <li><a href="#workflow">業務フロー</a></li>
+                  <li><a href="#ER-design">ER図</a></li>
+                  <li><a href="#use-case">ユースケース図</a></li>
+                </ol>
+                <li><a href="#detail-design">詳細設計</a></li>
+                <li><a href="#develop">開発</a></li>
+                <ol class="second-layer">
+                  <li><a href="#auto-ci">自動CIの構築</a></li>
+                  <li><a href="#github-project">Github Projectの利用</a></li>
+                </ol>
+              </ol>
+            </p>
+
+            <h3 id="motivation">本プロダクトのモチベーション</h3>
+
+            <p>
+              <h4>動機</h4>
+              <ul>
+                <li>設計関連の復習・学習のため</li>
+                <li>ちゃんとしたWeb API設計の学習</li>
+                <li>担当教員から<a href="./Toolkit-work.html">toolkitの採点プログラム</a>を提供して欲しいと言われたから</li>
+              </ul>
+            </p>
+            <p>
+              <h4>概要</h4>
+              　大学の講義は多くの学生が履修しており、課題を出した場合それら全員分を採点する必要がある。
+              しかし一般的に授業を受け持つ大学教員などは教職の他に研究職や雑務など多忙であるため、
+              採点業務を代理で行う目的で研究室に所属している学生からティーチングアシスタント(TA)を選び雇うことがある。
+              大学教員(担当教員)の負担を軽減する採点業務は段階的に行われ、採点-確認で分けられる。
+              担当教員が収集した答案をTAが採点し、担当教員が採点済み答案を確認し不備があれば修正することで採点業務が終了する。
+              採点業務は効率化すべき業務として多くのサービスが提供されており、
+              <a href="https://jpn.nec.com/printer/laser/solution/workstyle/saiten/index.html">テスト採点支援ソリューション(NEC)</a>や
+              <a href="https://www.kyoikusw.co.jp/campaign-pages/saiten-navi/">採点ナビ</a>などが存在する。
+              これらは小中高の採点業務を効率化するために提供されているサービスであり、
+              設問ごとにまとめた採点(串刺し採点)や成績分析，AIによる自動分割・自動採点を行うことができる。
+              これらのサービスで採点と編集を伴う確認を行うには2回採点や複数人同時採点を行う必要がある。
+              しかし2回採点や複数人同時採点では担当教員も採点を行う必要があるため、TAを雇う前と比較して担当教員の負担は軽減していない。
+              よって大学での採点-確認で構成される採点業務を支援し、効率化するシステムが必要である。
+            </p>
+
+            <h3 id="fundamental-design">基本設計</h3>
+            <div>
+              <p>
+                <h4 id="persona"><u>ペルソナの設定</u></h4>
+                <p>
+                  <h4>ペルソナ1：担当教員</h4>
+                  <ul>
+                    <li>職業</li>
+                    <ul class="second-layerL">
+                      <li>大学教員</li>
+                    </ul>
+                    <li>生活パターン</li>
+                    <ul class="second-layerL">
+                      <li>研究と教育業務・事務作業</li>
+                    </ul>
+                    <li>課題</li>
+                    <ul class="second-layerL">
+                      <li>採点業務に時間とエネルギーが取られる</li>
+                      <li>採点基準がTAによってまちまち</li>
+                      <li>採点基準が同課題の中でブレている</li>
+                      <li>小さすぎて丸などの採点記号が判別できない</li>
+                      <li>採点効率化のために独自のプログラムを組んだりしている</li>
+                    </ul>
+                  </ul>
+                </p>
+                <p>
+                  <h4>ペルソナ2：TA</h4>
+                  <ul>
+                    <li>職業</li>
+                    <ul class="second-layerL">
+                      <li>学生</li>
+                    </ul>
+                    <li>生活パターン</li>
+                    <ul class="second-layerL">
+                      <li>授業やバイト、研究などの活動</li>
+                    </ul>
+                    <li>課題</li>
+                    <ul class="second-layerL">
+                      <li>採点デバイスへのデータ移行が大変</li>
+                      <li>採点基準を採点しながら修正する必要がある</li>
+                      <li>pdfに直接採点する場合採点を修正する手間がかかる</li>
+                      <li>問題や答えのpdfが一枚だとどこを見るべきか直観的に分からない</li>
+                    </ul>
+                  </ul>
+                </p>
+              </p>
+              <p>
+                <h4 id="user-story"><u>ユーザストーリーマップ</u></h4>
+                <p>
+                  <img src="../img/digital-scoring-user-story.jpeg" style="display: block; margin: auto;" alt="">
+                </p>
+                　機能を順次追加する開発方針を取ろうと考えたためユーザーストーリーマップを作成しました。
+                ユーザーストーリーマップではペルソナごとにユーザーが行う行為、細分化された行為、システムが提供できる価値について記述しました。
+              </p>
+              <p>
+                <h4 id="system-design"><u>システム図</u></h4>
+                <p>
+                  <img src="../img/digital-scoring-system.jpg" style="display: block; margin: auto;" alt="">
+                </p>
+                　シンプルなシステム構成について記述しました。
+                サービスとして提供するものはWeb・AP・DBサーバで、サービスではweb上での採点-確認機能の他通知やデータの共有を行います。
+                またWeb・APサーバはローカルで動かすことで採点-確認機能を利用することができます。
+                ローカルの場合のデータ共有方法として、
+                アプリケーションを利用し採点結果や採点基準などのデータを規定の形式でデコードし、
+                Slackやメールなどで共有できることを想定しています。
+              </p>
+              <p>
+                <h4 id="workflow"><u>業務フロー</u></h4>
+                <p>
+                  <img src="../img/digital-scoring-workflow.jpg" style="display: block; margin: auto;" alt="">
+                </p>
+                　業務フローでは通常の業務フローとプロダクトを利用した業務フローについて記述しました。
+                プロダクトやサービスを利用することで、特に採点-確認業務の効率化を行います。<br>
+                　採点業務を行う際、プロダクトを利用すると串刺し採点で全ての答案の設問単位で一度に採点することができます。
+                またシステム上のファイルなため、採点基準の変更やそれに伴う採点済み答案の編集が容易に行えます。
+                採点終了時には採点データや採点基準データなどを規定の形式で送ることで、
+                採点記号が小さい問題などを解決し確認が容易なデータを送ることができます。<br>
+                　確認業務を行う際、プロダクトでデコードされたデータを利用するため不明瞭な点が無くなり、確認業務を効率的に行うことができます。<br>
+                　ここでサービスを利用した場合、web上で簡単に採点-確認を行うことができまた、
+                アップロードされたデータの共有や採点リクエスト，採点終了，採点基準の変更リクエストの通知を行うことができます。
+              </p>
+              <p>
+                <h4 id="ER-design"><u>ER図</u></h4>
+                <p>
+                  <img src="../img/digital-scoring-er.jpg" style="display: block; margin: auto;" alt="">
+                </p>
+                　ER図ではデータベースに必要なデータについて論理モデルで書き出しました。
+                <ul>
+                  <li>科目テーブルは「線形代数」や「情報数学」などを保存します</li>
+                  <li>ユーザーテーブルはTAのデータや担当教員のデータを保存します</li>
+                  <li>セクションテーブルは科目の「第一回」や「第二回」に関わるデータを保存します</li>
+                  <li>設問テーブルは課題内の「(1)」や「(2)」など1つの問題に対するデータを保存します</li>
+                  <li>答案テーブルは提出された課題1枚のデータを保存します</li>
+                  <li>採点テーブルは採点されたデータを答案・設問単位で保存します</li>
+                </ul>
+                また関係はほとんどが(1対0~多)ですが、採点者が登録していない段階で課題を登録したい場合があると考えユーザーとセクションは(0~1対0~多)で設定しました。
+              </p>
+              <p>
+                <h4 id="use-case"><u>ユースケース図</u></h4>
+                <p>
+                  <img src="../img/digital-scoring-usecase.jpg" style="display: block; margin: auto;" alt="">
+                </p>
+                　ユースケース図ではユーザーから見た機能について書き出しました。周辺データは採点基準等のデータを指します。
+                採点データのエンコードはTAがpdfに直接書いた採点をシステムにアップロードすることを指します。
+              </p>
+            </div>
+            
+            <h3 id="detail-design">詳細設計</h3>
+            詳細設計については順次行っていきます。
+            <h3 id="develop">開発</h3>
+            アーキテクチャについては機能を順次追加する開発方針のため、修正や追加の影響が出にくいMVCアーキテクチャを利用しようと考えています。
+            またローカルでも動くwebサーバなので、
+            Go/Ginを利用しコンパイルしたプログラムを提供することでローカルで環境を新たに作る必要無く動かせることを目指します。
+            <div>
+              <p>
+                <h4 id="auto-ci">自動CIの構築</h4>
+                　Github Actionを用いて自動テストを構築しました。自動テストはdevへのpush/pull requestとmainへのpull requestをトリガーにしています。
+                mainへのpushは禁止にし、pull requestは全てのテストが通過しないとマージ出来ません。
+              </p>
+              <p>
+                <h4 id="github-project">Github Projectの利用</h4>
+                　ISSUEにタスクを書き出し、それをToDO/In Progress/Doneのボードで管理しています。
+              </p>
+            </div>
+            <p>
+              <h3>振り返り</h3>
+              <ul>
+                <li>ハッカソン等で設計は程々にコーディングしてたので、今回基本設計という開発指針の素晴らしさを再確認した</li>
+                <li>なぜ基本設計でこんな多くの枚数を書かなければならないのかと考えていたが、後から見直すとそれぞれ役割が分かれており重要なのだと分かった</li>
+                <li>基本設計の始めと終わりで同じ意味を示す用語が異なる場合があったので用語集は大切だと思った</li>
+              </ul>
+            </p>
+            
+          </div>
+
+          <div class="home-link">
+            <a href="../../index.html#works">Works一覧へ</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="page-top" id="js-page-top">
+        <span class="material-icons-outlined">expand_less</span>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="copyright">&copy;EbichanOO</div>
+    </footer>
+    <!-- /footer -->
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type='text/javascript' src="../js/script.js"></script>
+</body>
+</html>
