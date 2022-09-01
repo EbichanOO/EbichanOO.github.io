@@ -31,7 +31,7 @@
         <nav class="gnav">
           <ul class="gnav-list">
             <li class="gnav-item"><a href="#works">WORKS</a></li>
-            <li class="gnav-item"><a href="#history">HISTORY</a></li>
+            <!-- <li class="gnav-item"><a href="#history">HISTORY</a></li> -->
             <li class="gnav-item"><a href="#skill">SKILL</a></li>
             <li class="gnav-item"><a href="#about">ABOUT</a></li>
             <li class="gnav-item"><a href="#contact">CONTACT</a></li>
@@ -50,7 +50,6 @@
           <p class="mv-subtitle">PORTFOLIO</p>
           <p class="mv-text">
             Webバックエンド・<br class="sp-only">インフラエンジニア<br>
-            2022年3月学部卒業
           </p>
         </div>
       </div>
@@ -61,25 +60,43 @@
         <div class="container">
           <h2 class="title">WORKS</h2>
           <div class="works-list">
-            <a class="works-item" href="src/htmls/pipo-work.html">
-              <div class="works-img"><img src="src/img/pipo.png" alt="" /></div>
-              <p class="works-name">個人辞書検索システムPIPO(2022)</p>
-              <p class="works-info">wikiのスクレイピング・全文検索</p>
+            <!-- 重要タスクs -->
+            <a class="works-item" href="src/htmls/mimiuchi-work.html">
+              <div class="works-img-important"><img src="src/img/mimiuchi-logo.png" /></div>
+              <p class="works-name">プロジェクト開発 Mimiuchi(2019)</p>
+              <p class="works-info">(スクラム開発)<br>Go MVCアーキテクチャのWeb APIサーバ構築<br>k8sインフラをGCPで構築<br>ステップ数：1455行(担当部分)</p>
             </a>
             <a class="works-item" href="src/htmls/digital-scoring.html">
-              <div class="works-img"><img src="src/img/digital-scoring-logo.jpg" alt="" /></div>
+              <div class="works-img-important"><img src="src/img/digital-scoring-logo.jpg" alt="" /></div>
               <p class="works-name">デジタル採点システムの設計開発(2022)</p>
               <p class="works-info">基本設計・自動CI構築</p>
+            </a>
+            <!-- 重要タスクs -->
+
+            <a class="works-item" href="src/htmls/chain.html">
+              <div class="works-img"><img src="src/img/chain_logo.png" alt="" /></div>
+              <p class="works-name">会話ボットアプリ chain(2022)</p>
+              <p class="works-info">tauri×react×TypeScript</p>
+            </a>
+            <a class="works-item" href="src/htmls/pipo-work.html">
+              <div class="works-img"><img src="src/img/pipo_logo.png" alt="" /></div>
+              <p class="works-name">個人辞書検索システムPIPO(2022)</p>
+              <p class="works-info">React</p>
             </a>
             <a class="works-item" href="src/htmls/B-research.html">
               <div class="works-img"><img src="src/img/b-img-logo.png" alt="" /></div>
               <p class="works-name">[卒業研究] エピソード記憶モジュールを用いた省メモリアーキテクチャの構築(2021)</p>
               <p class="works-info">Tensorflowプログラム作成 利用モデル：BERT<br>ステップ数：12852行(自作コード3766行)</p>
             </a>
-            <a class="works-item" href="src/htmls/mimiuchi-work.html">
-              <div class="works-img"><img src="src/img/mimiuchi-logo.png" alt="" /></div>
-              <p class="works-name">プロジェクト開発 Mimiuchi(2019)</p>
-              <p class="works-info">(スクラム開発)<br>Go MVCアーキテクチャのWeb APIサーバ構築<br>k8sインフラをGCPで構築<br>ステップ数：1455行(担当部分)</p>
+            <a class="works-item" href="src/htmls/Toolkit-work.html">
+              <div class="works-img"><img src="src/img/toolkit-deepl-logo.png" alt="" /></div>
+              <p class="works-name">Toolkit(2021)</p>
+              <p class="works-info">Pythonアプリケーション開発<br>ステップ数：727行</p>
+            </a>
+            <a class="works-item" href="src/htmls/tf-grad-work.html">
+              <div class="works-img"><img src="src/img/no-image-logo.png" alt="" /></div>
+              <p class="works-name">Tensorflowの勾配取得検証(2021)</p>
+              <p class="works-info">Tensorflowプログラム作成</p>
             </a>
             <a class="works-item" href="src/htmls/sprout-work.html">
               <div class="works-img"><img src="src/img/Sprout400300.png" alt="" width="400" height="300"/></div>
@@ -91,32 +108,22 @@
               <p class="works-name">顔認証対話型案内システム(2019)</p>
               <p class="works-info">Python webアプリケーション開発<br>ステップ数：400行(担当部分)</p>
             </a>
-            <a class="works-item" href="src/htmls/Toolkit-work.html">
-              <div class="works-img"><img src="src/img/toolkit-deepl-logo.png" alt="" /></div>
-              <p class="works-name">Toolkit(2021)</p>
-              <p class="works-info">Pythonアプリケーション開発<br>ステップ数：727行</p>
+            <a class="works-item" href="src/htmls/essayforDropbox.html">
+              <div class="works-img"><img src="src/img/essayfor-logo.jpg" alt="" /></div>
+              <p class="works-name">EssayForDropbox(2019)</p>
+              <p class="works-info">Python APIサーバ構築</p>
             </a>
             <a class="works-item" href="src/htmls/GuessAgeOfFace.html">
               <div class="works-img"><img src="src/img/guessFace-logo.jpg" alt="" /></div>
               <p class="works-name">年齢推定モデル(2017)</p>
               <p class="works-info">Python Numpy 深層プログラム&<br>processingプログラム作成<br>ステップ数：600行</p>
             </a>
-            <a class="works-item" href="src/htmls/tf-grad-work.html">
-              <div class="works-img"><img src="src/img/no-image-logo.png" alt="" /></div>
-              <p class="works-name">Tensorflowの勾配取得検証(2021)</p>
-              <p class="works-info">Tensorflowプログラム作成</p>
-            </a>
-            <a class="works-item" href="src/htmls/essayforDropbox.html">
-              <div class="works-img"><img src="src/img/essayfor-logo.jpg" alt="" /></div>
-              <p class="works-name">EssayForDropbox(2019)</p>
-              <p class="works-info">Python APIサーバ構築</p>
-            </a>
           </div>
         </div>
       </section>
       <!-- /works -->
 
-      <!-- history -->
+      <!-- history
       <section class="history section" id="history">
         <div class="container">
           <h2 class="title">HISTORY</h2>
@@ -171,16 +178,11 @@
                 <th>2021年04月<br>-2022年03月</th>
                 <th>卒業研究 エピソード記憶モジュールを用いた省メモリアーキテクチャの構築</th>
               </tr>
-              <!-- 
-              <tr>
-                <th></th>
-                <th></th>
-              </tr> -->
             </table>
           </div>
         </div>
       </section>
-      <!-- /history -->
+      -->
 
       <!-- skill -->
       <section class="skill section" id="skill">
@@ -190,15 +192,7 @@
             <table border="1" style="margin:auto;margin-bottom: 20px;" align="center" width="90%">
               <tr>
                 <th>年月</th>
-                <th>資格名</th>
-              </tr>
-              <tr>
-                <th>2022年03月</th>
-                <th>システム情報科学　学士</th>
-              </tr>
-              <tr>
-                <th>2020年01月</th>
-                <th>TOEIC L&R 535点(L 300点，R 235点)　取得</th>
+                <th>tips</th>
               </tr>
               <tr>
                 <th>2018年09月</th>
@@ -207,6 +201,14 @@
               <tr>
                 <th>2022年03月</th>
                 <th><a href="https://www.enpit.jp/">enPiT BizSysD(ビジネスシステムデザイン部門)</a>　修了</th>
+              </tr>
+              <tr>
+                <th>2019年08月 (1週間)</th>
+                <th>Ateamサマーインターン: 発表・バックエンド開発</th>
+              </tr>
+              <tr>
+                <th>2019年09月 (2週間)</th>
+                <th>トランス・コスモスサマーインターン: 発表・アンドロイド開発</th>
               </tr>
             </table>
             <div class="skill-item">
@@ -283,7 +285,7 @@
             <a class="contact-item" href="https://github.com/EbichanOO" target="_blank" rel="noopener">Github</a>
             <a class="contact-item" href="https://ab10.hatenablog.com/" target="_blank" rel="noopener">はてなブログ</a>
             <a class="contact-item" href="https://qiita.com/Ebi10" target="_blank" rel="noopener">Qiita</a>
-            <span class="contact-item">t.ebihara.work@gmail.com</span>
+            <a class="contact-item" href="mailto:t.ebihara.work@gmail.com" target="_blank" rel="noopener">Gmail</span>
           </div>
         </div>
       </section>

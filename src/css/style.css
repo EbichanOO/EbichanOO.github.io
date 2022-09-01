@@ -199,6 +199,10 @@ img {
   border: 1px solid #e6e6e6;
 }
 
+.works-img-important img {
+  border: 1px solid red;
+}
+
 .works-name {
   font-size: 12px;
   font-weight: bold;
